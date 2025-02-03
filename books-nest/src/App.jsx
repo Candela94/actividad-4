@@ -139,14 +139,15 @@ function App() {
 
 
 
-const selector = 'landing';
+const pathValue = window.location.pathname.slice(1)|| 'landing';
+console.log(pathValue);
 let page;
 
-switch(selector) {
+switch(pathValue) {
 
-  case 'iniciarsesion': page = <IniciarSesion />; break; 
+  case 'sesion': page = <IniciarSesion />; break; 
   case 'registro': page = <Registro />; break; 
-  case 'perfil' : page=     <Perfil userData={userData}/>;break;
+  case 'perfil' : page =  <Perfil userData = {userData}/>;break;
   case 'buscador': page = <Buscador />; break; 
   default:page = <Landing />
 }
@@ -157,8 +158,8 @@ switch(selector) {
     <>
     <Header />
 
-    {/* {page} */}
-    <Buscador />
+    {page}
+    {/* <Buscador /> */}
    
     <Footer />
 

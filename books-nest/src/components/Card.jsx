@@ -100,7 +100,7 @@ export const CardRental = ({ img, userId, userName, bookTitle, bookId, }) => {
                     <p className="UserId">Nº socio {userId}</p>
                 </div>
 
-                <PrimaryButton>¡Lo quiero!</PrimaryButton>
+                <PrimaryButton>Añadir libro</PrimaryButton>
             </div>
         </>
     )
