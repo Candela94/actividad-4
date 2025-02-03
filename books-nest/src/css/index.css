@@ -7,7 +7,11 @@
   align-items: center;
   padding: 1rem;
   justify-content: space-between;
+  background-color: var(--bckground);
   color: var(--txt);
+  position: sticky;
+  top: 0;
+  border-bottom: 0.3px solid var(--txt);
 }
 
 .Header-logo{}
@@ -28,7 +32,20 @@
   
 }
 
-
+.Footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 14px;
+  background-color: var(--txt);
+  color: var(--bckground);
+  border-radius: 20px 0 0 0 ;
+  cursor: pointer;
+}
 
 
 /* ------------------------ */
@@ -63,6 +80,97 @@
   color: var(--txt);
 }
 
+
+/* ------------------------ */
+       /* Landing */
+/* ------------------------ */
+
+
+
+.Contenedor{
+  display: flex;
+  flex-direction: column;
+
+}
+.Intro{
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  padding: 3rem;
+  align-items: center;
+}
+
+.Intro-texto{
+  width: 663%;
+}
+
+.Intro-h1{
+
+  font-size: 56px;
+}
+
+
+.Card-landing{
+  width: 200px;
+}
+
+.Card-image{
+  width: 100%;
+}
+
+
+.Card-descripcion{
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
+.Seccion-2{
+
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
+
+
+}
+
+.Seccion-2H1{
+  font-size: 40px;
+  width: 23%;
+}
+
+
+.galeria{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.Seccion-3{
+  margin:3rem;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  align-items: center;
+}
+
+
+
+.Seccion-3H1{
+  font-size: 40px;
+  width: 45%;
+}
+
+
+.Seccion-3Botones{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
 /* ------------------------ */
        /* Formulario */
@@ -240,6 +348,8 @@
 }
 
 
+
+
 .Card-imagen{
   width: 100%;
   background-color: red;
@@ -247,11 +357,74 @@
 }
 
 
+
+
+
+
+
 .Card-img{
   width: 100%;
   height: 100%;
 }
 
+
+
+
+
 .titulo{
   padding: 0.5rem;
+}
+
+
+
+/* ------------------------ */
+       /* Buscador */
+/* ------------------------ */
+
+.Formulario-buscador{
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+
+.Input-buscador{
+
+
+  padding: 0.5rem;
+  width: 30%;
+  border-radius: 4px;
+  border: 0.2px solid var(--txt);
+  font-family: poppins;
+  font-style: oblique;
+
+
+}
+
+.CardRental{
+  width: 200px;
+  padding: 1rem;
+ 
+ 
+}
+
+.imagen{
+  width: 100%;
+ 
+
+
+}
+
+.Rental-img{
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+
+
+.Galeria-rental{
+  display: flex;
+  justify-content: space-between;
 }

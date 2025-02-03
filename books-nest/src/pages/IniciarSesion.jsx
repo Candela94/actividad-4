@@ -1,7 +1,7 @@
 import { PrimaryButton } from "../components/Buttons"
 import { SecondaryButton } from "../components/Buttons"
 
-export const IniciarSesion = () => {
+ const IniciarSesion = () => {
 
     return (
 
@@ -53,5 +53,6 @@ export const IniciarSesion = () => {
 
 
 
-
 }
+
+export default IniciarSesion

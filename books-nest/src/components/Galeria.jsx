@@ -1,7 +1,7 @@
 
 
 import { CardUsuario } from "./Card";
-
+import { CardLanding } from "./Card";
 
 
 export const Galeria = () => {
@@ -25,4 +25,32 @@ export const Galeria = () => {
         
         </>
     )
+}
+
+
+
+export const GaleriaLanding = () => {
+
+    const cardData =[
+
+        {img: '../src/imgs/portada-1.png', descripcion: 'Pide prestado un libro a un usuario'},
+        {img: '../src/imgs/portada-3.png', descripcion: 'Comparte tus libros con gente de distintos lugares'},
+        {img: '../src/imgs/portada-2.png', descripcion: 'Disfruta de tu momento con un libro prestado por otra persona'}
+        
+        
+        ];
+        
+
+    return(
+
+
+        <>
+        {cardData.map((item, indice) => (
+            <CardLanding key={indice} img={item.img} descripcion = {item.descripcion}/>
+        ))}
+        
+        </>
+
+    )
+
 }

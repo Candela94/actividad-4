@@ -7,7 +7,7 @@ import { SecondaryButton } from "../components/Buttons"
 
 
 
-export const Registro = () => {
+const Registro = () => {
 
     return (
 
@@ -84,3 +84,6 @@ export const Registro = () => {
 
 
 }
+
+
+export default Registro

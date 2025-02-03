@@ -1,33 +1,19 @@
 
 import { Header } from "./components/Header"
-import { IniciarSesion } from "./pages/IniciarSesion"
-import { Registro } from "./pages/Registro"
+import { Footer } from "./components/Footer";
+import  IniciarSesion  from "./pages/IniciarSesion"
+import  Registro  from "./pages/Registro"
 import { Card } from "./components/Card";
-import { Perfil } from "./pages/Perfil";
+import  Perfil  from "./pages/Perfil";
 
-import {Landing }from "./pages/Landing"
-
-
-
-
-
-const userData = {
-  nombre: 'Mario',
-  usuario:'MLopez',
-  apellidos: 'López Ruiz',
-
-  edad: '31',
-  ciudad:'Valencia',
-
-  img: '../src/imgs/avatar.png',
-
-  valoraciones: '⭐⭐⭐⭐',
-
-  prestados:5,
-  alquilados: 7,
+import Landing from "./pages/Landing"
+import { CardLanding } from "./components/Card";
+import { GaleriaLanding } from "./components/Galeria";
+import Buscador from "./pages/Buscador";
 
 
-}
+
+
 
 
 
@@ -128,25 +114,53 @@ const CardLibros = [
 
 
 
+const userData = {
+  nombre: 'Mario',
+  usuario:'MLopez',
+  apellidos: 'López Ruiz',
+
+  edad: '31',
+  ciudad:'Valencia',
+
+  img: '../src/imgs/avatar.png',
+
+  valoraciones: '⭐⭐⭐⭐',
+
+  prestados:5,
+  alquilados: 7,
 
 
-
-
+}
 
 
 
 
 function App() {
-  
+
+
+
+const selector = 'landing';
+let page;
+
+switch(selector) {
+
+  case 'iniciarsesion': page = <IniciarSesion />; break; 
+  case 'registro': page = <Registro />; break; 
+  case 'perfil' : page=     <Perfil userData={userData}/>;break;
+  case 'buscador': page = <Buscador />; break; 
+  default:page = <Landing />
+}
+
+
 
   return (
     <>
     <Header />
-    {/* <IniciarSesion /> */}
-    {/* <Registro /> */}
-    {/* <Card nombre='Cien años de soledad' precio= {6} genero='Realismo mágico' img = {{src: '../imgs/cien-soledad.png', alt:'cien-años'}}  /> */}
-    {/* <Perfil userData={userData}/> */}
-    <Landing />
+
+    {/* {page} */}
+    <Buscador />
+   
+    <Footer />
 
     </>
   )

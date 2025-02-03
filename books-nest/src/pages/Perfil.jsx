@@ -4,9 +4,10 @@ import { Galeria } from "../components/Galeria";
 
 
 
-export const Perfil = ({ userData }) => {
+const Perfil = ({ nombre, img, prestados, alquilados, valoraciones, usuario }) => {
+  
 
-    const { nombre, apellidos, img, prestados, alquilados, valoraciones, usuario } = userData;
+    // const { nombre, apellidos, img, prestados, alquilados, valoraciones, usuario } = userData;
     console.log(img)
 
 
@@ -60,3 +61,6 @@ export const Perfil = ({ userData }) => {
 
 
 }
+
+
+export default Perfil
