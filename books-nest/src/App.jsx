@@ -124,7 +124,7 @@ const userData = {
 
   img: '../src/imgs/avatar.png',
 
-  valoraciones: '⭐⭐⭐⭐',
+  valoraciones: '⭐⭐⭐⭐⭐',
 
   prestados:5,
   alquilados: 7,
