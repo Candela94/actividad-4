@@ -80,25 +80,23 @@ export const CardLanding = ({ descripcion, img }) => {
 
 
 
-export const CardRental = ({ img, userId, userName, bookTitle, bookId, }) => {
+export const CardRental = ({ img, userName, bookTitle, }) => {
 
     return (
         <>
 
             <div className="CardRental">
                 <div className="imagen">
+                    
                 <img className='Rental-img' src={img} alt="portada" />
                 </div>
 
                 <div className="Rental-libro">
                     <h3 className="LibroH4">{bookTitle}</h3>
-                    <p className="LibroP">id {bookId}</p>
+                
                 </div>
 
-                <div className="Rental-user">
-                    <p className="UserName">Libro de {userName}</p>
-                    <p className="UserId">Nº socio {userId}</p>
-                </div>
+                
 
                 <PrimaryButton>Añadir libro</PrimaryButton>
             </div>
