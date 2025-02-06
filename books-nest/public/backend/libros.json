@@ -1,0 +1,13 @@
+
+en la actividad importamos el link como './backend/libros.json' cuando queremos traer los datos de los libros (response, async await)
+
+
+[{
+
+    "title": "el señor de los anillos",
+    "price": 25
+    
+}, {}
+
+
+]
