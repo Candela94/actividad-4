@@ -2,14 +2,18 @@
 
 
 
-export const PrimaryButton = ({children}) => {
+export const Button = ({variant='primary', children}) => {
+
+    const btnClass = `BtnClass ${ variant === 'primary' ? 'primary-btn' : 'secondary-btn'}`
+
+
 
     return(
 
 
         <>
         
-        <button className="PrimaryButton Button">{children}</button>
+        <button className= {btnClass}>{children}</button>
         
         </>
 
@@ -21,17 +25,3 @@ export const PrimaryButton = ({children}) => {
 
 
 
-
-export const SecondaryButton = ({children}) => {
-
-
-    return (
-
-        <>
-        
-        <button className="SecondaryButton Button">{children}</button>
-        </>
-    )
-
-
-}

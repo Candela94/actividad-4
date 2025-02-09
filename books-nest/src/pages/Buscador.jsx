@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { PrimaryButton } from "../components/Buttons"
+import { Button } from "../components/Buttons"
 import { CardRental } from "../components/Card"
 
 
@@ -91,7 +91,7 @@ const Buscador = () => {
                 placeholder="Buscar un libro" 
                 value={searchTerm}
                 onChange={handleSearch}/>
-                <PrimaryButton>Buscar</PrimaryButton>
+                <Button variant="primary">Buscar</Button>
             </form>
 
 

@@ -10,6 +10,7 @@ import Landing from "./pages/Landing"
 import { CardLanding } from "./components/Card";
 import { GaleriaLanding } from "./components/Galeria";
 import Buscador from "./pages/Buscador";
+import { NuevoLibro } from "./pages/NuevoLibro";
 
 
 
@@ -149,6 +150,7 @@ switch(pathValue) {
   case 'registro': page = <Registro />; break; 
   case 'perfil' : page =  <Perfil userData = {userData}/>;break;
   case 'buscador': page = <Buscador />; break; 
+  case 'nuevolibro': page = <NuevoLibro />; break;
   default:page = <Landing />
 }
 
@@ -160,7 +162,7 @@ switch(pathValue) {
 
     {page}
     {/* <Buscador /> */}
-   
+
     <Footer />
 
     </>

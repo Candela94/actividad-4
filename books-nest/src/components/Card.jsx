@@ -1,4 +1,4 @@
-import { PrimaryButton } from "./Buttons";
+import { Button } from "./Buttons";
 
 
 
@@ -98,7 +98,7 @@ export const CardRental = ({ img, userName, bookTitle, }) => {
 
                 
 
-                <PrimaryButton>Añadir libro</PrimaryButton>
+                <Button variant = 'primary'>Añadir libro</Button>
             </div>
         </>
     )

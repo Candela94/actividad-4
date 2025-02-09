@@ -1,4 +1,4 @@
-import { SecondaryButton } from "../components/Buttons";
+import { Button } from "../components/Buttons";
 import { CardUsuario } from "../components/Card";
 import { Galeria } from "../components/Galeria";
 
@@ -30,7 +30,7 @@ const Perfil = ({ nombre, img, prestados, alquilados, valoraciones, usuario }) =
                             <div className="Estrellas">{valoraciones}</div>
                         </div>
 
-                        <SecondaryButton>Dar de alta un nuevo libro +</SecondaryButton>
+                        <Button variant="secondary">Dar de alta un nuevo libro +</Button>
                     </div>
 
                 </div>

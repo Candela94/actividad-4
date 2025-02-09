@@ -1,8 +1,8 @@
 
 
 
-import { PrimaryButton } from "../components/Buttons"
-import { SecondaryButton } from "../components/Buttons"
+import { Button } from "../components/Buttons"
+
 import { GaleriaLanding } from "../components/Galeria"
 import { CardLanding } from "../components/Card"
 
@@ -19,10 +19,10 @@ import { CardLanding } from "../components/Card"
                 <section className="Intro">
                     <div className="Intro-texto">
                         <h1 className="Intro-h1">Libros que viajan, historias que se comparten</h1>
-                        <PrimaryButton>Regístrate en Book Nest</PrimaryButton>
+                        <Button variant="primary">Regístrate en Book Nest</Button>
 
                     </div>
-                    <img src="../src/imgs/portada.png" alt="portada" style={{ width: '30%' }} />
+                    <img src="../src/imgs/portada.png" alt="portada" style={{ width: '400px' }} />
                 </section>
 
 
@@ -41,8 +41,8 @@ import { CardLanding } from "../components/Card"
                     <h1 className="Seccion-3H1">Únete a la comunidad y empieza a descubrir nuevas historias</h1>
 
                     <div className="Seccion-3Botones">
-                        <SecondaryButton>Ya soy usuario</SecondaryButton>
-                        <PrimaryButton>Únete ahora</PrimaryButton>
+                        <Button variant="secondary">Ya soy usuario</Button>
+                        <Button variant="primary">Únete ahora</Button>
 
                     </div>
                 </section>
