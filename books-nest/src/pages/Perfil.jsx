@@ -1,19 +1,27 @@
 import { Button } from "../components/Buttons";
 import { CardUsuario } from "../components/Card";
 import { Galeria } from "../components/Galeria";
+import { useNavigate, useState } from 'react';
 
 
 
 const Perfil = ({ nombre, img, prestados, alquilados, valoraciones, usuario }) => {
-  
+
+
+    const [sectionActive, setSectionActive] = useState("miCuenta")
+
+    const handleSectionChange = (section) => {
+        setSectionActive(section)
+    };
+
+
 
     // const { nombre, apellidos, img, prestados, alquilados, valoraciones, usuario } = userData;
     console.log(img)
 
-
     return (
-
         <>
+
             <div className="contenedor">
 
                 <div className="Datos">
@@ -30,7 +38,7 @@ const Perfil = ({ nombre, img, prestados, alquilados, valoraciones, usuario }) =
                             <div className="Estrellas">{valoraciones}</div>
                         </div>
 
-                        <Button variant="secondary">Dar de alta un nuevo libro +</Button>
+                        <Button variant="secondary" >Dar de alta un nuevo libro +</Button>
                     </div>
 
                 </div>
@@ -38,26 +46,58 @@ const Perfil = ({ nombre, img, prestados, alquilados, valoraciones, usuario }) =
 
                 <div className="Galeria-libros">
                     <div className="Opciones">
-                        <p className="opcion1">Mi cuenta</p>
-                        <p className="opcion2">Mis libros</p>
+
+                        <div
+                            onClick={() => handleSectionChange("misLibros")}
+                            style={sectionActive === 'misLibros' ? { fontWeight: "bold",  cursor:'pointer' } : {}}
+                            className="opcion1">Mis libros
+                        </div>
+
+
+
+
+                        <div
+                            onClick={() => handleSectionChange("miCuenta")}
+                            style={sectionActive === 'miCuenta' ? { fontWeight: "bold" , cursor:'pointer' } : {}}
+                            className="opcion2">Mi cuenta
+                        </div>
+
+
 
                     </div>
 
 
+                    {sectionActive === 'miCuenta' && (
+                        <div className="Cuenta-contenido">
+                            <h3>Mi cuenta</h3>
 
-                    <div className="Galeria">
-                        <Galeria />
-                    </div>
+                            <ul className="Cuenta-ul">
+                                <li>Configuración de la cuenta</li>
+                                <li>Editar perfil</li>
+                                <li>Método de pago</li>
+                                <li>Mis libros alquilados</li>
+                                <li>Acerca de Books Nest</li>
+                            </ul>
 
+                        </div>
+
+                    )}
+
+
+                    {sectionActive === 'misLibros' && (
+                        <div className="Galeria">
+                            <Galeria />
+                        </div>
+
+                    )}
                 </div>
+                </div>
+                
+</>
+        
 
 
-
-            </div>
-
-
-        </>
-    )
+            )
 
 
 }

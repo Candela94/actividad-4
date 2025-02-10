@@ -5,15 +5,14 @@ import  IniciarSesion  from "./pages/IniciarSesion"
 import  Registro  from "./pages/Registro"
 import { Card } from "./components/Card";
 import  Perfil  from "./pages/Perfil";
-
 import Landing from "./pages/Landing"
-import { CardLanding } from "./components/Card";
+
 import { GaleriaLanding } from "./components/Galeria";
+import { CardLanding } from "./components/Card";
 import Buscador from "./pages/Buscador";
 import { NuevoLibro } from "./pages/NuevoLibro";
 
-
-
+import DetalleLibro from "./pages/DetalleLibro";
 
 
 
@@ -22,7 +21,7 @@ const CardLibros = [
   {
 
     img:{
-      src:'../imgs/cien-soledad.png',
+      src:'./public/imgs/cien-soledad.png',
       alt:'img1'
 
     } ,
@@ -123,7 +122,7 @@ const userData = {
   edad: '31',
   ciudad:'Valencia',
 
-  img: '../src/imgs/avatar.png',
+  img: './public/imgs/usuario.png',
 
   valoraciones: '⭐⭐⭐⭐⭐',
 
@@ -161,7 +160,8 @@ switch(pathValue) {
     <Header />
 
     {page}
-    {/* <Buscador /> */}
+    {/* <NuevoLibro /> */}
+    {/* <DetalleLibro />  */}
 
     <Footer />
 

@@ -22,7 +22,7 @@ import { CardLanding } from "../components/Card"
                         <Button variant="primary">Regístrate en Book Nest</Button>
 
                     </div>
-                    <img src="../src/imgs/portada.png" alt="portada" style={{ width: '400px' }} />
+                    <img src="./public/imgs/portada.png" alt="portada" style={{ width: '400px' }} />
                 </section>
 
 
@@ -41,7 +41,7 @@ import { CardLanding } from "../components/Card"
                     <h1 className="Seccion-3H1">Únete a la comunidad y empieza a descubrir nuevas historias</h1>
 
                     <div className="Seccion-3Botones">
-                        <Button variant="secondary">Ya soy usuario</Button>
+                        <Button variant="secondary">Iniciar sesión</Button>
                         <Button variant="primary">Únete ahora</Button>
 
                     </div>

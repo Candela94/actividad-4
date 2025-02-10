@@ -99,14 +99,14 @@
 }
 .Intro{
   display: flex;
-  justify-content: space-around;
-  gap: 3rem;
+  justify-content: center;
+  gap: 2.5rem;
   padding: 3rem;
   align-items: center;
 }
 
 .Intro-texto{
-  width: 60%;
+  width: 65%;
 }
 
 .Intro-h1{
@@ -356,7 +356,7 @@
 
 .Card{
   width: 200px;
-  box-shadow: 0.3px 0.3px 4px var(--txt);
+ 
 
 }
 
@@ -367,6 +367,7 @@
   width: 100%;
   background-color: red;
   height: 30vh;
+  object-fit: cover;
 }
 
 
@@ -473,6 +474,7 @@ font-family: poppins;
 
 .CardRental{
   width: 200px;
+ 
   padding: 1rem;
  
  
@@ -499,4 +501,31 @@ font-family: poppins;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2rem;
+}
+
+
+
+
+/* Detalle libro  */
+
+.Introduccion{
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+
+
+
+
+
+.Introduccion-imagen{
+  width: 700px;
+  background-color: blue;
+}
+
+
+
+.Introduccion-datos{
+  width: 60%;
 }

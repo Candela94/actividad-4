@@ -1,13 +1,162 @@
-
-en la actividad importamos el link como './backend/libros.json' cuando queremos traer los datos de los libros (response, async await)
-
-
-[{
-
-    "title": "el señor de los anillos",
-    "price": 25
-    
-}, {}
-
-
+[
+    {
+        "titulo": "Cien años de soledad",
+        "autor": "Gabriel García Márquez",
+        "genero": "Realismo mágico",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81u5rA2C5bL.jpg",
+        "propietario": "Carlos Mendoza",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "genero": "Ciencia ficción",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/61ZewDE3beL.jpg",
+        "propietario": "Ana González",
+        "disponible": "No"
+    },
+    {
+        "titulo": "El Gran Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "genero": "Ficción literaria",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/71FTb9X6wsL.jpg",
+        "propietario": "Martín Pérez",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "Orgullo y prejuicio",
+        "autor": "Jane Austen",
+        "genero": "Romance",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/71Q1tPupKjL.jpg",
+        "propietario": "Isabel Rodríguez",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "Don Quijote de la Mancha",
+        "autor": "Miguel de Cervantes",
+        "genero": "Clásico",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81b5+8vR5mL.jpg",
+        "propietario": "José López",
+        "disponible": "No"
+    },
+    {
+        "titulo": "Matar a un ruiseñor",
+        "autor": "Harper Lee",
+        "genero": "Ficción",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81aY1lxk+9L.jpg",
+        "propietario": "Lucía Fernández",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "El señor de los anillos",
+        "autor": "J.R.R. Tolkien",
+        "genero": "Fantasía",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/51EstVXM1UL.jpg",
+        "propietario": "Fernando Díaz",
+        "disponible": "No"
+    },
+    {
+        "titulo": "Harry Potter y la piedra filosofal",
+        "autor": "J.K. Rowling",
+        "genero": "Fantasía",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg",
+        "propietario": "Valeria Sánchez",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "Crónica de una muerte anunciada",
+        "autor": "Gabriel García Márquez",
+        "genero": "Realismo mágico",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81pZ3E8c7ZL.jpg",
+        "propietario": "Miguel Torres",
+        "disponible": "No"
+    },
+    {
+        "titulo": "El principito",
+        "autor": "Antoine de Saint-Exupéry",
+        "genero": "Ficción",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/71M4Y5G6ShL.jpg",
+        "propietario": "Laura Martínez",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "La sombra del viento",
+        "autor": "Carlos Ruiz Zafón",
+        "genero": "Misterio",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81dQwQlmAXL.jpg",
+        "propietario": "Sergio Hernández",
+        "disponible": "No"
+    },
+    {
+        "titulo": "Los juegos del hambre",
+        "autor": "Suzanne Collins",
+        "genero": "Ciencia ficción",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/61iP1k-rv2L.jpg",
+        "propietario": "Ana Paula Jiménez",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "El código Da Vinci",
+        "autor": "Dan Brown",
+        "genero": "Misterio",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/71X3O0Ux3EL.jpg",
+        "propietario": "Carlos Pérez",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "El alquimista",
+        "autor": "Paulo Coelho",
+        "genero": "Ficción",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg",
+        "propietario": "Verónica García",
+        "disponible": "No"
+    },
+    {
+        "titulo": "Rayuela",
+        "autor": "Julio Cortázar",
+        "genero": "Ficción experimental",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81yX6QvG1YL.jpg",
+        "propietario": "Ricardo Sánchez",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "Fahrenheit 451",
+        "autor": "Ray Bradbury",
+        "genero": "Ciencia ficción",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg",
+        "propietario": "Patricia Cruz",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "El retrato de Dorian Gray",
+        "autor": "Oscar Wilde",
+        "genero": "Clásico",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/71Q5Z6Z6Z9L.jpg",
+        "propietario": "Ricardo López",
+        "disponible": "No"
+    },
+    {
+        "titulo": "La casa de los espíritus",
+        "autor": "Isabel Allende",
+        "genero": "Realismo mágico",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Z5Z5Z5Z5L.jpg",
+        "propietario": "Eva Martínez",
+        "disponible": "Sí"
+    },
+    {
+        "titulo": "El nombre del viento",
+        "autor": "Patrick Rothfuss",
+        "genero": "Fantasía",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Z5Z5Z5Z5L.jpg",
+        "propietario": "Luis Martínez",
+        "disponible": "No"
+    },
+    {
+        "titulo": "Los pilares de la Tierra",
+        "autor": "Ken Follett",
+        "genero": "Ficción histórica",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Z5Z5Z5Z5L.jpg",
+        "propietario": "Gabriela Gómez",
+        "disponible": "Sí"
+    }
 ]

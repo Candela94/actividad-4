@@ -4,62 +4,36 @@ import { Button } from "../components/Buttons"
 import { CardRental } from "../components/Card"
 
 
+
+
+
+
 const Buscador = () => {
-
-
-        const rentalData = [
-
-            {   
-                img:'../src/imgs/anillos.png',
-                id: 1,
-                userId: 101,
-                userName: "Juan Pérez",
-                bookId: 201,
-                bookTitle: "El señor de los anillos"
-            },
-            {   
-                img:'../src/imgs/misery.png',
-                id: 2,
-                userId: 102,
-                userName: "María García",
-                bookId: 202,
-                bookTitle: "Misery"
-            },
-            {   
-                img:'../src/imgs/patti.png',
-                id: 3,
-                userId: 103,
-                userName: "Carlos López",
-                bookId: 203,
-                bookTitle: "Just kids"
-            },
-            {   
-                img:'../src/imgs/ansia.png',
-                id: 4,
-                userId: 104,
-                userName: "Ana Martínez",
-                bookId: 204,
-                bookTitle: "Ansia"
-            },
-            {   
-                img:'../src/imgs/bowie.png',
-                id: 5,
-                userId: 105,
-                userName: "Luisa Fernández",
-                bookId: 205,
-                bookTitle: "Bowie"
-            }
-          ];
 
 
 
     const [searchTerm, setSearchTerm] = useState("");
-    const [books, setBooks] = useState(rentalData); //Array de libros de API
-    const [filteredBooks, setFiltered] = useState(rentalData); //libros filtrados
+    const [books, setBooks] = useState([]); //Array de libros de archivo.json
+    const [filteredBooks, setFilteredBooks] = useState([]); //libros filtrados
+    const [error,setError] = useState("")
+
+
+  
+
+    useEffect(() => {
+     
+
+        fetch('/public/backend/libros.json')
+        .then(response => response.json())
+        .then(datos => {
+            setBooks(datos); //asigmanos datos de libros a books
+            setFilteredBooks(datos); //iniciamos los libros filtrados con todos los libros
+        })
+        .catch(error => setError("¡Vaya! libro no encontrado :("))
+    }, []) //se ejecuta una vez al montar el componente 
 
 
 
-   
 
 
     //filtro de búsqueda
@@ -69,13 +43,13 @@ const Buscador = () => {
         setSearchTerm(term);
 
 
-        const filteredBooks = books.filter((book) =>
-            book.bookTitle.toLowerCase().includes(term));
-        setFiltered(filteredBooks)
+        const filtered = books.filter((book) =>
+            book.titulo.toLowerCase().includes(term)); //comparamos el nombre del libro con el término de búsqueda
+        setFilteredBooks(filtered)
 
 
 
-     
+
 
 
     }
@@ -86,27 +60,27 @@ const Buscador = () => {
         <>
 
             <form className='Formulario-buscador' action="#" method="GET">
-                <input className='Input-buscador' 
-                type="text" name="1" 
-                placeholder="Buscar un libro" 
-                value={searchTerm}
-                onChange={handleSearch}/>
-                <Button variant="primary">Buscar</Button>
+                <input className='Input-buscador'
+                    type="text" name="1"
+                    placeholder="Buscar un libro"
+                    value={searchTerm}
+                    onChange={handleSearch} />
+             
+                {error && <p>{error}</p>}
             </form>
 
 
-            <h1>Últimas novedades</h1>
-
+     
             <div className="Galeria-rental">
 
                 {filteredBooks.map((book, id) => (
 
 
-                    <CardRental key={book.bookId}
-                    img={book.img} 
-                    bookTitle={book.bookTitle} />
-                    
-                    
+                    <CardRental 
+                        img={book.imagen}
+                        bookTitle={book.titulo} />
+
+
                 ))}
             </div>
 

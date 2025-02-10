@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "../components/Buttons"
 
 
@@ -9,10 +9,24 @@ export const NuevoLibro = () => {
     const [libro, setLibro] = useState("")
     const [autor, setAutor] = useState("")
     const [editorial, setEditorial] = useState("")
-
     const [frase, setFrase] = useState("")
+    const [mensaje, setMensaje] = useState("")
+    const [genero, setGenero] = useState("")
+
+    const [mensajeExito, setMensajeExito] = useState("")
+
+    
+
+ 
+
+
+
 
     const Chars = frase.length;
+
+
+
+
 
     const handleChange = (e) => {
         setFrase(e.target.value)
@@ -27,16 +41,44 @@ export const NuevoLibro = () => {
 
 
 
+
+    useEffect(() => {
+
+        if(frase.length === 100) {
+            setMensaje("No puedes escribir más de 100 caracteres")
+        } else {
+            setMensaje(`${frase.length} caracteres`)
+        }
+
+
+    }, [frase]) //Ejecutamos cada vez que cambia la frase
+
+
+    const handleEnviar = (e) => {
+
+        e.preventDefault();
+
+        if(!libro || !autor || !editorial || !frase) {
+            alert("Por favor, completa todos los campos")
+            return;  
+    } 
+
+    setMensajeExito("¡Enhorabuena, has subido tu nuevo libro! :)")
+    }
+
     return (
 
         <>
 
 
-            <form action="" className="Formulario-libro">
+            <form action="" onSubmit={handleEnviar} className="Formulario-libro">
                 <section className="Formulario-datosDescripcion">
 
                     <div className="Formulario-datos">
                         <input value={libro} className="Formulario-inputs" type="text" name="nameBook" placeholder="Nombre del libro" onChange={(e) => setLibro(e.target.value)} />
+
+
+                        <input value={genero} className="Formulario-inputs" type="text" name="genBook" placeholder="Género" onChange={(e) => setGenero(e.target.value)} />
 
                         <input value={autor} className="Formulario-inputs" type="text" name="autor" placeholder="Autor" onChange={(e) => setAutor(e.target.value)} />
 
@@ -67,7 +109,7 @@ export const NuevoLibro = () => {
                             maxLength='225'
 
                             placeholder="Breve descripción"></textarea>
-                        <p className="TextArea-p"> {Chars} caracteres</p>
+                        <p className="TextArea-p"> {mensaje} </p>
                     </div>
                 </section>
 
@@ -75,18 +117,19 @@ export const NuevoLibro = () => {
 
                 <section className="Formulario-contacto">
 
-                 
+
 
                     <div className="Formulario-opciones">
                         <input type="radio" name="contacto" value='email' /> email
                         <input type="radio" name="contacto" value='email' /> Whatsapp
                         <input type="radio" name="contacto" value='email' /> A traves de Books Nest
                     </div>
-                    
+
 
 
                 </section>
-                    <Button variant="primary">Dar de alta mi nuevo libro</Button>
+                <Button  type="submit "variant="primary" >Dar de alta mi nuevo libro</Button>
+                {mensajeExito&& <p>{mensajeExito}</p>}
             </form>
         </>
     )
