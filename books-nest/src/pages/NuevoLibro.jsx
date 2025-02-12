@@ -132,7 +132,7 @@ export const NuevoLibro = () => {
 
                 </section>
                 <Button  type="submit "variant="primary" >Dar de alta mi nuevo libro</Button>
-                {mensajeExito&& <p>{mensajeExito}</p>}
+                {mensajeExito&& <p> {mensajeExito}</p>}
             </form>
         </>
     )
